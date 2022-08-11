@@ -1,0 +1,282 @@
+// font 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400&display=swap');
+
+@font-face {
+    font-family: 'lexendBold';
+    src: url('../fonts/Lexend-Bold.ttf');
+}
+@font-face {
+    font-family: 'lexendExtraBold';
+    src: url('../fonts/Lexend-ExtraBold.ttf');
+}
+@font-face {
+    font-family: 'lexendLight';
+    src: url('../fonts/Lexend-Light.ttf');
+}
+@font-face {
+    font-family: 'lexendMedium';
+    src: url('../fonts/Lexend-Medium.ttf');
+}
+@font-face {
+    font-family: 'lexendRegular';
+    src: url('../fonts/Lexend-Regular.ttf');
+}
+@font-face {
+    font-family: 'lexendSemiBold';
+    src: url('../fonts/Lexend-SemiBold.ttf');
+}
+@font-face {
+    font-family: 'lexendThin';
+    src: url('../fonts/Lexend-Thin.ttf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'lexendRegular';
+}
+
+
+// colors
+:root{
+    --accent-01 : #EC1A4F;
+    --accent-02 : #E7DE0B;
+    --blue : #164795;
+    --light-blue : #4183EC;
+    --dark : #303031;
+    --white : #FFFFFF;
+    --text : #7E7F7F;
+    --snow : #F9F8F7;
+    --blue-gr: linear-gradient(254deg, #1A4180 0.5%, #264F91 28.09%, #284472 53.51%, #214276 68.63%, #1C3763 84.84%);
+}
+
+li{
+    list-style: none !important;
+}
+a{
+    text-decoration: none !important;
+}
+ul{
+    padding-left: 0 !important;
+    margin-bottom: 0 !important;
+}
+.main-btn{
+    padding: 0.7em 1.5em;
+    background: var(--accent-01);
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    font-family: 'lexendSemiBold';
+    font-size: 16px;
+    gap: 12px;
+    outline: none;
+    border: none;
+    max-width: max-content;
+    transition: 0.2s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    min-width: max-content;
+
+    &:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 180%;
+        background: var(--blue);
+        transform: skewY(12deg) translateY(100%);
+        transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    span{
+        font-family: 'lexendSemiBold';
+        font-size: 16px;
+        color: var(--white);
+        z-index: 3;
+        position: relative;
+        display: block;
+        min-width: max-content;
+        transition: 0.2s ease-in-out;
+    }
+
+    img{
+        width: 20px;
+        position: relative;
+        z-index: 3;
+    }
+
+    &.border-btn{
+        outline: 1px solid var(--accent-01);
+        background: transparent;
+        color: var(--accent-01);
+
+        &:after{
+            background: var(--accent-01);
+        }
+
+        span{
+            color: var(--accent-01);
+        }
+    }
+
+    &.white{
+        background: var(--white);
+
+        span{
+            color: var(--dark);
+        }
+
+        &:after{
+            background: var(--accent-02);
+        }
+
+        &:hover{
+
+            span{
+                color: var(--dark);
+            }
+        }
+    }
+
+    &:hover{
+        transform: scale(0.93);
+        color: white;
+
+        &:after{
+            transform: skewY(0deg) translateY(-10%);
+        }
+
+        span{
+            color: white;
+        }
+    }
+
+    &.pos-right{
+        margin-left: auto !important;
+        margin-right: 0px;
+        
+    }
+}
+.bg-snow{
+    background: var(--snow);
+}
+.para{
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    color: var(--dark);
+
+    b{
+        font-weight: 600;
+    }
+
+    &.big{
+        font-size: 19px;
+    }
+}
+.sec-head{
+    position: relative;
+    margin-bottom: 0;
+
+    h3{
+        font-size: 2.9em;
+        font-family: 'lexendSemiBold';
+        color: var(--blue);
+        margin-bottom: 0;
+    }
+
+    &.white{
+
+        h3{
+            color: var(--white);
+        }
+    }
+}
+.big-text{
+    font-size: 1.7em;
+    line-height: 140%;
+    font-family: 'lexendMedium';
+
+    &.white{
+        color: var(--white);
+    }
+}
+
+.qt-text{
+    color: rgba($color: #fff, $alpha: 0.5);
+    font-size: 20px;
+    font-family: 'lexendMedium';
+    margin-bottom: 0;
+    margin-top: 1.5em;
+}
+.page-header{
+    position: relative;
+    overflow: hidden;
+    padding: 6em 0px;
+    background: var(--blue-gr);
+
+    .title{
+        color: white;
+        font-family: 'lexendSemiBold';
+        font-size: 2.8em;
+        margin-bottom: 0.5em;
+    }
+
+    .big-text{
+        color: white;
+        margin-bottom: 0;
+    }
+
+    &.oferta-header{
+        background: linear-gradient(254deg, rgba(26, 65, 128, 0.86) 0.5%, rgba(38, 79, 145, 0.89) 28.09%, rgba(40, 68, 114, 0.96) 53.51%, #214276 68.63%, #1C3763 84.84%), url(../images/oferta-bg.jpg) center/cover no-repeat;
+    }
+}
+.timeline-img{
+    width: 100%;
+
+    img{
+        width: 100%;
+    }
+}
+.btn-flex-2{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+.form-group{
+    width: 100%;
+    position: relative;
+    margin-bottom: 1em;
+
+    .inp-group{
+        width: 100%;
+
+        input, textarea{
+            width: 100%;
+            padding: 0.5em 1em ;
+            background: var(--white);
+            outline: none;
+            border: 1px solid transparent !important;
+            transition: 0.2 ease-in-out;
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark);
+            font-size: 16px;
+
+            &::placeholder{
+                font-family: 'Poppins', sans-serif;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 150%;
+                color: #707070;
+                opacity: 1;
+            }
+
+            &:focus{
+                border-color: var(--accent-01) !important;
+            }
+        }
+    }
+}
